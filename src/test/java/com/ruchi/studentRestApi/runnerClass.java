@@ -9,8 +9,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features="classpath:features/",
         glue = "classpath:com.ruchi.stepdefinitions",
-        strict = true
+        strict = true,
+        plugin = { "pretty", "html:target/cucumber-reports" }
 )
+
 public class runnerClass{
 
 }

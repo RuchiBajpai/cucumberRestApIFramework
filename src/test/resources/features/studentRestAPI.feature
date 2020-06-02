@@ -3,5 +3,14 @@ Feature: Testing a Student REST API
   represented by StudentController
 
   Scenario: Post request to create a new student
-    When user send the right json body to create a new student
-#    Then the server should handle it and create a new student
+
+  Given I create the following student using the rest API:
+    | id           | 0      |
+    | firstName    | Neha   |
+    | lastName     | Sharma |
+    | nationality  | Indian |
+    | studentClass | Grade1 |
+
+
+
+
