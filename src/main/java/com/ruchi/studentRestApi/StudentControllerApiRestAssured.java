@@ -35,13 +35,11 @@ public class StudentControllerApiRestAssured {
 
 
     }
-    public int deleteCall(int studentid) {
+    public Response deleteCall(int studentid) {
 
         RequestSpecification request = RestAssured.given();
         Response response = request.delete(baseURL + studentid);
-        int code = response.getStatusCode();
-        System.out.println(code);
-        return  code;
+        return  response;
 
     }
 
